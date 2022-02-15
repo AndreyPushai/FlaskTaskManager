@@ -2,3 +2,22 @@ body {
     margin: 0;
     font-family: sans-serif;
 }
+
+h1 { text-align: center; }
+
+table {
+    align-self: center;
+}
+
+td {
+    text-align: center;
+    padding: 5px;
+}
+
+.form {
+    margin-top: 20px;
+}
+
+#content {
+    width: 70%
+}
