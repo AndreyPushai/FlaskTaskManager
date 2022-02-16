@@ -11,7 +11,19 @@
     <h1>Task Master</h1>
     {% if tasks|length < 1 %}
     <h4>No tasks yet. Create one!</h4>
+
+    <form action="/" method="POST">
+        <input type="text" name="content" id="content">
+        <input type="submit" value="Add Task">
+    </form>
+
     {% else %}
+
+    <form action="/" method="POST">
+        <input type="text" name="content" id="content">
+        <input type="submit" value="Add Task">
+    </form>
+
     <table>
         <tr>
             <th>Task</th>
@@ -23,23 +35,17 @@
         <tr>
             <td>{{ task.content }}</td>
             <td>{{ task.date_created.date() }}</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
             <td>
-                <a href="/delete/{{ task.id }}">Delete</a>
-                <br>
-                <a href="/update/{{ task.id }}">Update</a>
+                <form>
+                    <button class="styled green" type="submit" formaction="/update/{{ task.id }}">Update</button>
+                    <button class="styled red" type="submit" formaction="/delete/{{ task.id }}">Delete</button>
+                </form>
             </td>
         </tr>
         {% endfor %}
 
     </table>
     {% endif %}
-    <form action="/" method="POST">
-        <input type="text" name="content" id="content">
-        <input type="submit" value="Add Task">
-    </form>
+
 </div>
 {% endblock %}
