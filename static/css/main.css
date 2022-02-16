@@ -5,8 +5,21 @@ body {
 
 h1, h4 { text-align: center; }
 
+table, th, td {
+    border: 1px solid gray;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+}
+
 table {
-    align-self: center;
+    width: 800px;
+    height: auto;
+    margin-top: 5;
+    margin-bottom: 5;
+    object-fit: cover;
 }
 
 td {
@@ -18,6 +31,40 @@ td {
     margin-top: 20px;
 }
 
-#content {
-    width: 70%
+.styled {
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+    background-image: linear-gradient(to top left,
+                                      rgba(0, 0, 0, .2),
+                                      rgba(0, 0, 0, .2) 30%,
+                                      rgba(0, 0, 0, 0));
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+                inset -2px -2px 3px rgba(0, 0, 0, .6);
+}
+
+.red {
+    background-color: rgba(220, 0, 0, 1);
+}
+
+.red:hover {
+    background-color: rgba(255, 0, 0, 1);
+}
+
+.green {
+    background-color: rgba(0, 150, 100, 1);
+}
+
+.green:hover {
+    background-color: rgba(0, 200, 150, 1);
+}
+
+.styled:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+                inset 2px 2px 3px rgba(0, 0, 0, .6);
 }
